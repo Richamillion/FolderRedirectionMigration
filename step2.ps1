@@ -72,8 +72,7 @@ while ($true) {
     Robocopy $sourcePath "$destPath\Documents" $robocopyOptions /XD `
         "$sourcePath\Desktop" `
         "$sourcePath\Documents" `
-        "$sourcePath\Downloads" `
-        "$sourcePath\Profile.V6"
+        "$sourcePath\Downloads"
 
     if ($LASTEXITCODE -gt 3) {
         Write-Host "Robocopy failed for remaining files. Exit code: $LASTEXITCODE" -ForegroundColor Red
