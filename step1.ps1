@@ -60,7 +60,7 @@ while ($true) {
         } catch {
             Write-Host "Failed to add user to group: $_" -ForegroundColor Red
         }
-        # Remove from DEM groups
+        # Check legacy DEM groups
         foreach ($group in $legacyGroups) {
             try {
                 $isInGroup = Get-ADGroupMember -Identity $group | Where-Object { $_.SamAccountName -eq $fdUser.SamAccountName }
